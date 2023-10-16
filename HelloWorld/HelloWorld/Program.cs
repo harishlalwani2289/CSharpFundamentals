@@ -5,22 +5,27 @@ using HelloWorld.Math;
 
 namespace HelloWorld
 {
+    enum ShippingMethod
+    {
+        RegularMail = 0,
+        RegisteredAirMail = 1,
+        ExpressMail = 2,
+    }
     public class Program
     {
         public static void Main(string[] args)
         {
-            int number;
-            var firstName = "Mosh";
-            var lastName = "Hypol";
+            var method = ShippingMethod.RegularMail;
+            Console.WriteLine((int)method);
 
-            var fullName = string.Format("{0} {1}", firstName, lastName);
-            Console.WriteLine(fullName);
+            var methodId = 2;
+            Console.WriteLine((ShippingMethod)methodId);
 
-            var names = new string[3] { "John", "Jaani", "Janardan" };
-            var formattedNames = string.Join(", ", names);
-            Console.WriteLine(formattedNames);
+            Console.WriteLine(method.ToString());
 
-
+            var methodName = "ExpressMail";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(shippingMethod.ToString());
         }
 
 
