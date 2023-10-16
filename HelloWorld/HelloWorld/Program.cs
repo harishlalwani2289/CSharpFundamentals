@@ -15,17 +15,17 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            var method = ShippingMethod.RegularMail;
-            Console.WriteLine((int)method);
+            var a = 10;
+            var b = a;
+            b += 1;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(string.Format("a: {0}, b: {1}",a,b));
 
-            var methodId = 2;
-            Console.WriteLine((ShippingMethod)methodId);
-
-            Console.WriteLine(method.ToString());
-
-            var methodName = "ExpressMail";
-            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
-            Console.WriteLine(shippingMethod.ToString());
+            int[] array1 = { 1, 2, 3 };
+            int[] array2 = array1;
+            array2[0] = 111;
+            Console.WriteLine(array1[0]);
         }
 
 
