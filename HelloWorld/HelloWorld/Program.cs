@@ -9,26 +9,24 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            try
-            {
-                var john = new Person
-                {
-                    firstName = "John",
-                    lastName = "Smith"
-                };
-                john.Introduce();
+            var numbers = new int[] { 1, 2, 3, 4 };
+            Console.WriteLine(numbers[2]);
 
-            }
-            catch (OverflowException e)
-            {
-                Console.WriteLine("Kya kar rahe ho bhai..");
-                //throw e;
-            }
+            string list = string.Join(",", numbers.Select(x => x+45));
+            Console.WriteLine(list);
 
-            Calculator calculator = new Calculator();
-            Console.WriteLine( calculator.add(3, 4));
+            string formattedString = string.Format("{0}    {1}", numbers[0], list);
+            Console.WriteLine(formattedString);
 
+            string name = "Moshidi";
+            Console.WriteLine(name[4]);
+
+            string nameWithBackslash = "Har\\ish";
+            Console.WriteLine(nameWithBackslash);
+
+            string path = @"c:\fkfk\dffd\ldkf";
         }
+
 
         private static void AddNumber(int number)
         {
