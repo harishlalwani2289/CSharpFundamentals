@@ -9,22 +9,18 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            var numbers = new int[] { 1, 2, 3, 4 };
-            Console.WriteLine(numbers[2]);
+            int number;
+            var firstName = "Mosh";
+            var lastName = "Hypol";
 
-            string list = string.Join(",", numbers.Select(x => x+45));
-            Console.WriteLine(list);
+            var fullName = string.Format("{0} {1}", firstName, lastName);
+            Console.WriteLine(fullName);
 
-            string formattedString = string.Format("{0}    {1}", numbers[0], list);
-            Console.WriteLine(formattedString);
+            var names = new string[3] { "John", "Jaani", "Janardan" };
+            var formattedNames = string.Join(", ", names);
+            Console.WriteLine(formattedNames);
 
-            string name = "Moshidi";
-            Console.WriteLine(name[4]);
 
-            string nameWithBackslash = "Har\\ish";
-            Console.WriteLine(nameWithBackslash);
-
-            string path = @"c:\fkfk\dffd\ldkf";
         }
 
 
